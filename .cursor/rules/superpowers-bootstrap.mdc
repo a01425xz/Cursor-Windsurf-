@@ -1,0 +1,9 @@
+---
+description: 本项目已禁用 Superpowers 技能
+alwaysApply: false
+enabled: false
+---
+
+# Superpowers 已禁用
+
+此文件覆盖全局 Superpowers 规则。本项目的 `.claude/settings.local.json` 配合此配置，确保 Superpowers 不会在此项目中生效。
