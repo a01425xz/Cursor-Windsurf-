@@ -1,69 +1,69 @@
-# Cursor & Windsurf Backup Tools
+# Cursor & Windsurf 备份工具
 
-A desktop backup toolkit for **Cursor** and **Windsurf** configuration/data, built with **Python + PySide6**.
+一个面向 **Cursor** 和 **Windsurf** 的桌面备份工具集，基于 **Python + PySide6** 构建。
 
-## Project Structure
+## 项目结构
 
 - `cursor-backup-tool/`  
-  Cursor backup GUI app source code
+  Cursor 备份图形工具源码
 - `windsurf-backup-tool/`  
-  Windsurf backup GUI app source code
+  Windsurf 备份图形工具源码
 - `Cursor备份工具.exe`  
-  Prebuilt Cursor backup executable (root-level artifact)
+  已打包的 Cursor 可执行文件（根目录产物）
 
-## Requirements
+## 运行环境
 
 - Python 3.10+
-- Windows (recommended, based on current packaging and artifacts)
+- Windows（当前打包与产物主要面向 Windows）
 
-## Install Dependencies
+## 安装依赖
 
-Install each app's dependencies in its own environment.
+建议为两个工具分别使用独立环境安装依赖。
 
-### Cursor backup tool
+### Cursor 备份工具
 
 ```bash
 cd cursor-backup-tool
 pip install -r requirements.txt
 ```
 
-### Windsurf backup tool
+### Windsurf 备份工具
 
 ```bash
 cd windsurf-backup-tool
 pip install -r requirements.txt
 ```
 
-## Run from Source
+## 源码运行
 
-### Cursor backup tool
+### Cursor 备份工具
 
 ```bash
 cd cursor-backup-tool
 python main.py
 ```
 
-### Windsurf backup tool
+### Windsurf 备份工具
 
 ```bash
 cd windsurf-backup-tool
 python main.py
 ```
 
-## Build
+## 打包说明
 
-This repository already contains spec/build scripts and build artifacts for packaging.
+仓库中已包含打包所需的 spec/脚本和部分构建产物。
 
-Examples:
+示例：
 
-- Cursor tool: `cursor-backup-tool/build.ps1`, `cursor-backup-tool/build.spec`
-- Windsurf tool: `windsurf-backup-tool/*.spec`
+- Cursor 工具：`cursor-backup-tool/build.ps1`、`cursor-backup-tool/build.spec`
+- Windsurf 工具：`windsurf-backup-tool/*.spec`
 
-You can package executables using PyInstaller with the corresponding spec file.
+可使用 PyInstaller 配合对应 spec 文件进行打包。
 
-## UI Preview
+## 界面预览
 
-### Windsurf Backup Tool
+### Windsurf 备份工具
 
 ![Windsurf 界面预览](./Windsurf界面图.png)
 
@@ -71,7 +71,7 @@ You can package executables using PyInstaller with the corresponding spec file.
 - 支持一键备份、恢复、删除备份
 - 展示状态快照范围与备份历史
 
-### Cursor Backup Tool
+### Cursor 备份工具
 
 ![Cursor 界面预览](./Cursor界面图.png)
 
@@ -79,7 +79,7 @@ You can package executables using PyInstaller with the corresponding spec file.
 - 支持创建备份、恢复备份、删除备份
 - 支持备份列表刷新与容量展示
 
-## Notes
+## 说明
 
-- This repository currently includes generated build artifacts (`build/`, `dist/`, and `.pyc` in some folders).
-- If you want a cleaner source-only repository, add a `.gitignore` and remove generated artifacts in a follow-up change.
+- 当前仓库包含部分生成产物（如 `build/`、`dist/`、`.pyc`）。
+- 如果你希望仓库更干净，可后续补充 `.gitignore` 并清理生成产物。
